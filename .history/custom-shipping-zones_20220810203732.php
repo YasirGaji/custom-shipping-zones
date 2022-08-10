@@ -18,24 +18,24 @@ add_filter( 'woocommerce_states', 'yasir_csz_states' );
 
 function yasir_csz_states( $states ) {
 
-  $map = array();
+    $map = array();
 
-  $cities = array(
-    'LA19999' => array(
-      'city'     => 'Lekki',
-      'division' => 'Lagos Island',
-    ),
-    'LA29999' => array(
-      'city'     => 'Surulere',
-      'division' => 'Lagos Mainland'
-    ),
-  );
+    $cities = array(
+        'LA19999' => array(
+            'city'     => 'Lekki',
+            'division' => 'Lagos Island',
+        ),
+        'LA29999' => array(
+            'city'     => 'Surulere',
+            'division' => 'Lagos Mainland'
+        ),
+    );
 
-  foreach ( $cities as $city => $cityValue ) {
-    $map[$city] = $cityValue['city'] . ', '. $cityValue['division'];
-  }
-  
-  $states['NG'] = $map;
-  
-  return $states;
+    foreach ( $cities as $city => $cityValue ) {
+        $map[$city] = $cityValue['city'] . ', '. $cityValue['division'];
+    }
+    
+    $states['NG'] = $map;
+    
+    return $states;
 }
