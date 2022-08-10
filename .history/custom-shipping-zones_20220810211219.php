@@ -27,7 +27,7 @@ function yasir_csz_states( $states ) {
     ),
     'LA29999' => array(
       'city'     => 'Surulere',
-      'division' => 'Lagos',
+      'division' => 'Lagos'
     ),
   );
 
@@ -35,7 +35,7 @@ function yasir_csz_states( $states ) {
     $map[$city] = $cityValue['city'] . ', '. $cityValue['division'];
   }
   
-  $states['NG'] = $map;
+  $states['LA'] = $map;
   
   return $states;
 }
